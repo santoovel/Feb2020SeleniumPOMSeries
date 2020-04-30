@@ -16,7 +16,8 @@ public class LoginPage extends BasePage {
 	By username = By.id("username");
 	By password = By.id("password");
 	By loginButton = By.id("loginBtn");
-	By signUpLink = By.linkText("Sign up123");
+	By signUpLink = By.linkText("Sign up");
+	
 	By showPasswordLink = By.xpath("//span[text()='Show Password']");
 	By forgotPwdLink = By.linkText("Forgot my password");
 	By loginSSOButton = By.xpath("//button[@id='ssoBtn']");
