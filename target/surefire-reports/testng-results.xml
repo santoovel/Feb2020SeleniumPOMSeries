@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="HubSpot App Regression Suite" duration-ms="36141" started-at="2020-04-29T23:19:34Z" finished-at="2020-04-29T23:20:10Z">
+    <groups>
+    </groups>
+    <test name="HubSpot Functional Regression Test" duration-ms="36141" started-at="2020-04-29T23:19:34Z" finished-at="2020-04-29T23:20:10Z">
+      <class name="com.qa.hubspot.tests.LoginPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@5b58ed3c]" name="setUp" is-config="true" duration-ms="18712" started-at="2020-04-29T23:19:34Z" finished-at="2020-04-29T23:19:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyLoginPageTitleTest()[pri:1, instance:com.qa.hubspot.tests.LoginPageTest@5b58ed3c]" name="verifyLoginPageTitleTest" duration-ms="201" started-at="2020-04-29T23:19:53Z" finished-at="2020-04-29T23:19:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginPageTitleTest -->
+        <test-method status="PASS" signature="verifySignUpLinkTest()[pri:2, instance:com.qa.hubspot.tests.LoginPageTest@5b58ed3c]" name="verifySignUpLinkTest" duration-ms="951" started-at="2020-04-29T23:19:53Z" finished-at="2020-04-29T23:19:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignUpLinkTest -->
+        <test-method status="PASS" signature="verifShowPasswordLinkTest()[pri:3, instance:com.qa.hubspot.tests.LoginPageTest@5b58ed3c]" name="verifShowPasswordLinkTest" duration-ms="96" started-at="2020-04-29T23:19:54Z" finished-at="2020-04-29T23:19:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifShowPasswordLinkTest -->
+        <test-method status="PASS" signature="verifyForgotPasswordTest()[pri:4, instance:com.qa.hubspot.tests.LoginPageTest@5b58ed3c]" name="verifyForgotPasswordTest" duration-ms="77" started-at="2020-04-29T23:19:55Z" finished-at="2020-04-29T23:19:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyForgotPasswordTest -->
+        <test-method status="PASS" signature="verifycheckloginSSOButtonTest()[pri:5, instance:com.qa.hubspot.tests.LoginPageTest@5b58ed3c]" name="verifycheckloginSSOButtonTest" duration-ms="58" started-at="2020-04-29T23:19:55Z" finished-at="2020-04-29T23:19:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifycheckloginSSOButtonTest -->
+        <test-method status="PASS" signature="loginTest()[pri:6, instance:com.qa.hubspot.tests.LoginPageTest@5b58ed3c]" name="loginTest" duration-ms="14560" started-at="2020-04-29T23:19:55Z" finished-at="2020-04-29T23:20:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@5b58ed3c]" name="tearDown" is-config="true" duration-ms="940" started-at="2020-04-29T23:20:09Z" finished-at="2020-04-29T23:20:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.hubspot.tests.LoginPageTest -->
+    </test> <!-- HubSpot Functional Regression Test -->
+  </suite> <!-- HubSpot App Regression Suite -->
+</testng-results>
