@@ -6,6 +6,8 @@ import com.qa.hubspot.base.BasePage;
 import com.qa.hubspot.utils.Constants;
 import com.qa.hubspot.utils.ElementUtil;
 import com.qa.hubspot.utils.TimeUtil;
+
+import io.qameta.allure.Step;
 public class LoginPage extends BasePage {
 	
 	//local driver
@@ -34,13 +36,13 @@ public class LoginPage extends BasePage {
 	//3. Page actions and methods we have to create
 	// in page classes we don't verify anything
 	// Never write assertion in Page class
-	
+	@Step("getting the page title")
 	public String getLoginPageTitle() {
 	//	return driver.getTitle();
 		 elementUtil.waitForTitleToBePresent(Constants.LOGIN_PAGE_TITLE,10);
 		return elementUtil.doGetPageTitle();
 	}
-	
+	@Step("verifying sign up link")
 	public boolean checkSignUpLink() {
 		// return driver.findElement(signUpLink).isDisplayed();
 		
@@ -59,7 +61,7 @@ public class LoginPage extends BasePage {
 		return driver.findElement(loginSSOButton).isEnabled();
 	}
 	
-	
+	@Step("login with username: {0} and password : {1} ")
 	public HomePage doLogin(String un, String pwd) {
 	//	driver.findElement(username).sendKeys(un);
 		//driver.findElement(password).sendKeys(pwd);

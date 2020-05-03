@@ -12,6 +12,12 @@ import com.qa.hubspot.pages.HomePage;
 import com.qa.hubspot.pages.LoginPage;
 import com.qa.hubspot.utils.Constants;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+
 
 //test will not extend basepage have to create reference
 
@@ -29,7 +35,8 @@ import com.qa.hubspot.utils.Constants;
 // if we have mul @Test annotations it will pick alphabetical order
 
 // test page class should never call driver api or calls
-	
+@Epic("Epic - 101 : define login feature for hubpot application")
+@Feature("US - 1001 : create features for login with signup, title and login")
 public class LoginPageTest {
 
 	WebDriver driver;
@@ -46,11 +53,11 @@ public class LoginPageTest {
 	}
 	
 	@Test(priority=1, enabled=true)
-	/*
-	 * @Description("verify LoginPage Title Test....")
-	 * 
-	 * @Severity(SeverityLevel.NORMAL)
-	 */
+	
+	  @Description("verify LoginPage Title Test....")
+	  
+	  @Severity(SeverityLevel.NORMAL)
+	 
 	public void verifyLoginPageTitleTest() {
 		String title = loginPage.getLoginPageTitle();
 		System.out.println("Login Page Title is : "+ title);
@@ -59,6 +66,8 @@ public class LoginPageTest {
 	}
 	
 	@Test(priority=2)
+	@Description("verify SignUp Link Test")
+	@Severity(SeverityLevel.CRITICAL)
 	public void verifySignUpLinkTest() {
 		Assert.assertTrue(loginPage.checkSignUpLink(),"singUp link is not present ....");
 	}
@@ -80,7 +89,10 @@ public class LoginPageTest {
 	
 	
 	
-	@Test(priority=6)
+	//@Test(priority=6)
+	@Test(priority = 6, description = "verify app login test", enabled=false)
+	@Description("verify app login Test")
+	@Severity(SeverityLevel.BLOCKER)
 	public void loginTest() {
 		HomePage homePage = loginPage.doLogin(prop.getProperty("username"), prop.getProperty("password"));
 		System.out.println("Home Page Logged IN Account Name :==> "+ homePage.getAccountName());
