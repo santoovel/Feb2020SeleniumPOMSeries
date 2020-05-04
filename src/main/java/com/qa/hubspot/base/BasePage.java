@@ -44,7 +44,13 @@ public class BasePage {
 	 */
 	public WebDriver init_driver(Properties prop) {
 		
-		String browser = prop.getProperty("browser");
+		String browser = null;
+		if(System.getProperty("browser")==null) {
+			browser = prop.getProperty("browser");
+		}
+		else {
+			browser = System.getProperty("browser");
+		}
 		System.out.println("browser name you're using is : "+ browser);
 		
 		// calling options manager 
@@ -109,12 +115,16 @@ public class BasePage {
 			path = "./src/main/java/com/qa/hubspot/config/config.properties"; 
 		}
 		else {
+			
 			switch (env) {
 			case "qa":
 				path = "./src/main/java/com/qa/hubspot/config/qa.config.properties"; 
 				break;
 			case "dev":
 				path = "./src/main/java/com/qa/hubspot/config/dev.config.properties"; 
+				break;
+			case "stage":
+				path = "./src/main/java/com/qa/hubspot/config/stage.config.properties";
 				break;
 			default:
 				System.out.println("Please pass the correct environment value....");
