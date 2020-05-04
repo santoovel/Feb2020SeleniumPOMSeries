@@ -6,7 +6,7 @@ pipeline {
         sh 'echo "Buld env"'
       }
     }
-    
+
     stage('deploy on QA Env') {
       steps {
         sh 'echo "deploy on QA Env"'
